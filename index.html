@@ -1,0 +1,96 @@
+<!-- index.html -->
+<!-- This is the main structure of your portfolio website -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Title (important for SEO) -->
+  <title>Phindile | Full Stack Developer</title>
+
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  (function(){
+    emailjs.init("YOUR_PUBLIC_KEY"); // replace this
+  })();
+</script>
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav>
+    <h2>Phindile.dev</h2>
+
+    <!-- Navigation links -->
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HOME SECTION ===== -->
+  <section id="home">
+    <h1>Hi, I'm Phindile 👋</h1>
+    <p>Full Stack Developer building modern web applications.</p>
+
+    <button onclick="scrollToProjects()">View My Work</button>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a passionate developer skilled in building full-stack applications using modern technologies.
+    </p>
+
+    <!-- Skills -->
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>React (learning)</li>
+    </ul>
+  </section>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section id="projects">
+    <h2>My Projects</h2>
+
+    <!-- Project Card -->
+    <div class="project">
+      <h3>AI Student App</h3>
+      <p>An AI-powered learning assistant for students.</p>
+    </div>
+
+    <div class="project">
+      <h3>Portfolio Website</h3>
+      <p>This website you are currently viewing.</p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+
+    <!-- Contact Form -->
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" placeholder="Your Message"></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Link JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
