@@ -19,28 +19,18 @@ body {
 nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
+  padding: 20px 60px;
 }
 
 .nav-links {
   display: flex;
-  list-style: none;
 }
 
 .nav-links li {
   margin-left: 30px;
+  list-style: none;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: white;
-  transition: 0.3s;
-}
-
-.nav-links a:hover {
-  color: #38bdf8;
-}
 
 /* ===== SECTIONS ===== */
 section {
@@ -199,6 +189,53 @@ button {
   background: #38bdf8;
   border: none;
   border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+/* HERO LAYOUT */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container splits left + right */
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+}
+
+/* LEFT TEXT */
+.hero-text {
+  max-width: 500px;
+}
+
+.name {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.title {
+  color: #38bdf8;
+  margin: 10px 0;
+}
+
+/* RIGHT IMAGE */
+.hero-image img {
+  width: 300px;
+  border-radius: 20px;
+}
+
+/* BUTTONS */
+.buttons button {
+  margin: 10px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #38bdf8;
   color: white;
   cursor: pointer;
 }
