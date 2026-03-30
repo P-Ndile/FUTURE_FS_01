@@ -112,3 +112,35 @@ button {
     width: 90%;
   }
 }
+.profile-pic {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+.intro {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.sub-intro {
+  color: #94a3b8;
+  margin-bottom: 20px;
+}
+
+.buttons button {
+  margin: 10px;
+}
+
+.project-links a {
+  margin-right: 10px;
+  color: #38bdf8;
+}
+
+.skills li {
+  margin: 8px 0;
+}
+
+.socials a {
+  margin: 10px;
+  color: #38bdf8;
+}

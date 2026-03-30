@@ -1,50 +1,50 @@
 // script.js
-// This file handles all interactivity
+// This file handles interactivity for your portfolio
 
-// Scroll to projects section when button is clicked
+// =============================
+// 🔹 Smooth Scroll to Projects
+// =============================
 function scrollToProjects() {
   document.getElementById("projects").scrollIntoView({
     behavior: "smooth"
   });
 }
 
-// Handle contact form submission
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-  e.preventDefault();
+// =============================
+// 🔹 Contact Form Handling
+// =============================
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault(); // prevents page reload
 
-  emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    message: document.getElementById("message").value
-  })
-  .then(() => {
-    alert("Message sent successfully!");
-  })
-  .catch((error) => {
-    console.log(error);
-    alert("Failed to send message.");
-  });
-});
-
-  // Get form values
+  // Get form values (only when form is submitted)
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
   const message = document.getElementById("message").value;
 
-  // For now, just log it (later we connect backend)
-  console.log("Name:", name);
-  console.log("Email:", email);
-  console.log("Message:", message);
-
-  alert("Message sent successfully!");
-
-  // Reset form
-  this.reset();
+  // Send email using EmailJS
+  emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+    name: name,
+    email: email,
+    message: message
+  })
+  .then(() => {
+    alert("✅ Message sent successfully!");
+    document.getElementById("contactForm").reset(); // clear form
+  })
+  .catch((error) => {
+    console.error("Email error:", error);
+    alert("❌ Failed to send message. Please try again.");
+  });
 });
-// Fade-in animation when scrolling
 
+// =============================
+// 🔹 Scroll Animation (Fade In)
+// =============================
+
+// Select all sections
 const sections = document.querySelectorAll("section");
 
+// Run animation on scroll
 window.addEventListener("scroll", () => {
   sections.forEach(section => {
     const position = section.getBoundingClientRect().top;
@@ -57,7 +57,7 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// Initial hidden state
+// Set initial hidden state
 sections.forEach(section => {
   section.style.opacity = 0;
   section.style.transform = "translateY(50px)";
