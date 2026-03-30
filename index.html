@@ -1,5 +1,5 @@
 <!-- index.html -->
-<!-- This is the main structure of your portfolio website -->
+<!-- This is the main structure of my portfolio website -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,75 +16,86 @@
 
 <script>
   (function(){
-    emailjs.init("YOUR_PUBLIC_KEY"); // replace this
+    emailjs.init("phindileblessed@gmail.com"); // replace this
   })();
 </script>
 </head>
 
 <body>
+  <div class="floating-icons">
+  <span>💻</span>
+  <span>⚛️</span>
+  <span>🟢</span>
+  <span>🌐</span>
+  <span>📦</span>
+</div>
 
   <!-- ===== NAVBAR ===== -->
   <nav>
-    <h2>Phindile.dev</h2>
+  <h2 class="logo">Phindile.dev</h2>
 
     <!-- Navigation links -->
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
+<ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
   <!-- ===== HOME SECTION ===== -->
   <section id="home">
-    <h1>Hi, I'm Phindile 👋</h1>
-    <p class="intro">
-  I am a Full Stack Developer passionate about building modern, responsive, and user-focused web applications.
-</p>
 
-<p class="sub-intro">
-  I specialize in JavaScript, React, and Node.js, and I enjoy turning ideas into real-world digital solutions.
-</p>
+  <!-- 👤 Profile Image -->
+  <img src="your-photo.jpg" alt="Phindile" class="profile-pic">
 
-<div class="buttons">
-  <a href="#projects"><button>View My Work</button></a>
-  <a href="cv (2).pdf" download><button>Download CV</button></a>
-</div>
+  <h1>Hello, I'm Phindile Blessed Ndlovu</h1>
 
-    <button onclick="scrollToProjects()">View My Work</button>
-    <img src="your-photo.jpg" alt="Phindile" class="profile-pic">
-  </section>
+  <h3 class="title">Full Stack Developer</h3>
+
+  <p class="intro">
+    I build modern, responsive, and user-focused web applications using JavaScript and full-stack technologies.
+  </p>
+
+  <div class="buttons">
+    <a href="#projects"><button>View My Work</button></a>
+    <a href="cv.pdf" download><button>Download CV</button></a>
+  </div>
+
+</section>
 
   <!-- ===== ABOUT SECTION ===== -->
   <section id="about">
-    <h2>About Me</h2>
+  <h2>About Me</h2>
+
+  <div class="about-container">
+
     <p>
-  I am a dedicated Full Stack Developer with a strong interest in building scalable and user-friendly web applications. 
-  I enjoy solving real-world problems through code and continuously improving my skills in modern web technologies.
-</p>
+      I am a dedicated Full Stack Developer with a strong interest in building scalable and user-friendly web applications.
+      I enjoy solving real-world problems through code and continuously improving my skills.
+    </p>
 
-<p>
-  My technical stack includes JavaScript, React, Node.js, and MongoDB. I am currently expanding my knowledge in full-stack 
-  development and working on projects that demonstrate both frontend and backend capabilities.
-</p>
+    <div class="skills-box">
+      <h3>Technical Skills</h3>
+      <ul>
+        <li><strong>Frontend:</strong> HTML, CSS, JavaScript, React</li>
+        <li><strong>Backend:</strong> Node.js, Express</li>
+        <li><strong>Database:</strong> MongoDB</li>
+        <li><strong>Tools:</strong> Git, GitHub, Vercel</li>
+      </ul>
+    </div>
 
-<p>
-  I am highly motivated, detail-oriented, and always eager to learn new tools and frameworks that improve performance and user experience.
-</p>
-<div>
-  <a href="https://github.com/P-Ndile">GitHub</a>
-  <a href="https://linkedin.com/in/phindile-ndlovu-471066270">LinkedIn</a>
-</div>
-    <!-- Skills -->
-    <h3>Technical Skills</h3>
+    <div class="social-buttons">
+      <a href="https://github.com/P-Ndile" target="_blank">
+        <button>GitHub</button>
+      </a>
 
-<ul class="skills">
-  <li>Frontend: HTML, CSS, JavaScript, React</li>
-  <li>Backend: Node.js, Express</li>
-  <li>Database: MongoDB</li>
-  <li>Tools: Git, GitHub, Vercel</li>
-</ul>
+      <a href="https://linkedin.com/in/phindile-ndlovu-471066270" target="_blank">
+        <button>LinkedIn</button>
+      </a>
+    </div>
+
+  </div>
+</section>
     
   </section>
 

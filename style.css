@@ -19,21 +19,27 @@ body {
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px 50px;
-  background: rgba(15, 23, 42, 0.9);
-  position: sticky;
-  top: 0;
 }
 
-nav a {
-  color: #e2e8f0;
-  margin-left: 20px;
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 30px;
+}
+
+.nav-links a {
   text-decoration: none;
+  color: white;
   transition: 0.3s;
 }
 
-nav a:hover {
-  color: #38bdf8; /* blue highlight */
+.nav-links a:hover {
+  color: #38bdf8;
 }
 
 /* ===== SECTIONS ===== */
@@ -143,4 +149,56 @@ button {
 .socials a {
   margin: 10px;
   color: #38bdf8;
+}
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 3px solid #38bdf8;
+}
+
+.title {
+  color: #38bdf8;
+  margin: 10px 0;
+}
+.floating-icons span {
+  position: absolute;
+  font-size: 30px;
+  opacity: 0.1;
+  animation: float 10s infinite linear;
+}
+
+.floating-icons span:nth-child(1) { top: 20%; left: 10%; }
+.floating-icons span:nth-child(2) { top: 50%; left: 80%; }
+.floating-icons span:nth-child(3) { top: 70%; left: 20%; }
+.floating-icons span:nth-child(4) { top: 30%; left: 60%; }
+.floating-icons span:nth-child(5) { top: 80%; left: 50%; }
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+  100% { transform: translateY(0); }
+}
+.about-container {
+  max-width: 700px;
+  margin: auto;
+}
+
+.skills-box {
+  margin-top: 20px;
+}
+
+.skills-box li {
+  margin: 8px 0;
+}
+
+.social-buttons button {
+  margin: 10px;
+  padding: 10px 20px;
+  background: #38bdf8;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
 }
