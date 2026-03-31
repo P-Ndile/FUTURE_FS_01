@@ -22,7 +22,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   const message = document.getElementById("message").value;
 
   // Send email using EmailJS
-  emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+  emailjs.send("service_opfi74z", "template_qchp3ty", {
     name: name,
     email: email,
     message: message
