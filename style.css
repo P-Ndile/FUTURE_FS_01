@@ -239,3 +239,49 @@ button {
   color: white;
   cursor: pointer;
 }
+/* SECTION HEADINGS */
+section h2 {
+  margin-bottom: 30px;
+}
+
+/* TIMELINE */
+.timeline {
+  max-width: 800px;
+  margin: auto;
+}
+
+.card {
+  background: #1e293b;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+/* EDUCATION + CERTIFICATIONS */
+.edu-card, .cert-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #1e293b;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  width: 80%;
+}
+
+.edu-card img, .cert-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+/* BUTTONS */
+button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #38bdf8;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
