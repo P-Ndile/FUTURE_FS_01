@@ -43,37 +43,90 @@
 
     <!-- DASHBOARD -->
     <section id="dashboard">
-      <h1>Hello, I'm Phindile Blessed Ndlovu</h1>
-      <p class="subtitle">Full Stack Developer</p>
 
-      <div class="cards">
+<div class="hero">
 
-        <div class="card" onclick="scrollToSection('projects')">
-          <h2>2+</h2>
-          <p>Projects</p>
-          <span>View my featured projects</span>
-        </div>
+  <div class="hero-text">
+    <h1>Hello, I'm Phindile Blessed Ndlovu</h1>
+    <p class="subtitle">Full Stack Developer</p>
 
-        <div class="card" onclick="scrollToSection('experience')">
-          <h2>1+</h2>
-          <p>Experience</p>
-          <span>View my experience</span>
-        </div>
+    <p class="hero-desc">
+      I am an aspiring Full Stack Developer passionate about building modern,
+      responsive and impactful digital solutions. I enjoy turning ideas into
+      real web applications that solve real-world problems.
+    </p>
 
-        <div class="card" onclick="scrollToSection('skills')">
-          <h2>10+</h2>
-          <p>Skills</p>
-          <span>Explore my tech skills</span>
-        </div>
+    <div class="hero-buttons">
+      <a href="cv (2).pdf" target="_blank" class="btn">View CV</a>
+      <a href="cv (2).pdf" download class="btn">Download CV</a>
+    </div>
+  </div>
 
-        <div class="card" onclick="scrollToSection('certifications')">
-          <h2>2+</h2>
-          <p>Certifications</p>
-          <span>View my certifications</span>
-        </div>
+  <div class="hero-image">
+    <img src="Profile.jpg" alt="Phindile">
+  </div>
 
-      </div>
-    </section>
+</div>
+
+<!-- ABOUT -->
+<div class="about-box">
+  <h2>About Me</h2>
+
+  <p>
+    I am currently studying at the <strong>University of Pretoria</strong>,
+    pursuing a <strong>Bachelor of Political Science</strong>.
+    My studies have helped me develop analytical thinking,
+    communication skills, and an understanding of systems and leadership.
+  </p>
+
+  <p>
+    While studying Political Science, I became deeply interested in technology,
+    especially Full Stack Web Development. I enjoy the process of creating
+    complete digital products from frontend design to backend functionality.
+  </p>
+
+  <p>
+    Recently, I have also developed a strong interest in Cybersecurity because
+    I believe building great systems also means protecting them. My goal is to
+    combine development and security to create safe, scalable and valuable solutions.
+  </p>
+
+  <p>
+    I am motivated by continuous growth, solving meaningful problems and using
+    technology to create opportunities for myself and others.
+  </p>
+</div>
+
+<!-- DASHBOARD CARDS -->
+<div class="cards">
+
+  <div class="card" onclick="scrollToSection('projects')">
+    <h2>2+</h2>
+    <p>Projects</p>
+    <span>View my featured projects</span>
+  </div>
+
+  <div class="card" onclick="scrollToSection('experience')">
+    <h2>3+</h2>
+    <p>Experience</p>
+    <span>View my experience</span>
+  </div>
+
+  <div class="card" onclick="scrollToSection('skills')">
+    <h2>10+</h2>
+    <p>Skills</p>
+    <span>Explore my tech skills</span>
+  </div>
+
+  <div class="card" onclick="scrollToSection('certifications')">
+    <h2>2+</h2>
+    <p>Certifications</p>
+    <span>View my certifications</span>
+  </div>
+
+</div>
+
+</section>
 
     <!-- SKILLS -->
     <section id="skills">
@@ -94,33 +147,48 @@
 
     <!-- EXPERIENCE -->
     <section id="experience">
-      <h2>My Experience</h2>
+<h2>My Experience</h2>
 
-      <div class="exp-card">
-        <img src="ivatha.jpg" alt="Ivatha">
-        <div>
-          <h3>Ivatha Aftercare</h3>
-          <p>Mathematics Tutor (2025 - Present)</p>
-        </div>
-      </div>
+<div class="exp-card" onclick="toggleInfo(this)">
+  <img src="ivatha.jpg">
+  <div>
+    <h3>Ivatha Aftercare</h3>
+    <p>Mathematics Tutor</p>
 
-      <div class="exp-card">
-        <img src="mwr-image.jpg" alt="MWR">
-        <div>
-          <h3>MWR CyberSec</h3>
-          <p>Cybersecurity Internship</p>
-        </div>
-      </div>
+    <div class="hidden-info">
+      Delivered online academic support, lesson planning and learner progress reports.
+      Strengthened communication, leadership and problem-solving skills.
+    </div>
+  </div>
+</div>
 
-      <div class="exp-card">
-        <img src="future-interns.jpg" alt="Future Interns">
-        <div>
-          <h3>Future Interns</h3>
-          <p>Full Stack Developer Intern</p>
-        </div>
-      </div>
+<div class="exp-card" onclick="toggleInfo(this)">
+  <img src="mwr-image.jpg">
+  <div>
+    <h3>MWR CyberSec Internship</h3>
+    <p>Cybersecurity Intern</p>
 
-    </section>
+    <div class="hidden-info">
+      Participated in a 16-week cybersecurity program focused on web security,
+      ethical hacking, vulnerability testing and professional reporting.
+    </div>
+  </div>
+</div>
+
+<div class="exp-card" onclick="toggleInfo(this)">
+  <img src="future-interns.jpg">
+  <div>
+    <h3>Future Interns</h3>
+    <p>Full Stack Developer Intern</p>
+
+    <div class="hidden-info">
+      Building real-world modern web applications using frontend and backend tools.
+      Developing practical skills in responsive design, deployment and project workflows.
+    </div>
+  </div>
+</div>
+
+</section>
 
     <!-- PROJECTS -->
     <section id="projects">

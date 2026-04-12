@@ -56,3 +56,12 @@ sections.forEach((section,index)=>{
 
   section.style.transition = "all 0.6s ease";
 });
+function toggleInfo(card){
+const info = card.querySelector(".hidden-info");
+
+if(info.style.display === "block"){
+info.style.display = "none";
+}else{
+info.style.display = "block";
+}
+}
