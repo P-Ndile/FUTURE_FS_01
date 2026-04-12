@@ -1,284 +1,186 @@
 <!-- index.html -->
-<!-- This is the main structure of my portfolio website -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Phindile Portfolio</title>
 
-  <!-- Title (important for SEO) -->
-  <title>Phindile | Full Stack Developer</title>
-
-  <!-- Link CSS -->
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
-<script>
-  (function(){
-    emailjs.init("1mVJMoL6kIxa1XU4a"); // replace this
-  })();
-</script>
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <script>
+    (function () {
+      emailjs.init("1mVJMoL6kIxa1XU4a"); 
+      // Replace with your EmailJS Public Key
+    })();
+  </script>
 </head>
-
 <body>
-  <div class="floating-icons">
-  <span>💻</span>
-  <span>⚛️</span>
-  <span>🟢</span>
-  <span>🌐</span>
-  <span>📦</span>
-</div>
 
-  <!-- ===== NAVBAR ===== -->
-  <nav>
-  <h2 class="logo">Phindile.dev</h2>
+<div class="container">
 
-    <!-- Navigation links -->
-<ul class="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-  <!-- ===== HOME SECTION ===== -->
-  <section id="home" class="hero">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2 class="logo">Phindile.dev</h2>
 
-  <div class="hero-container">
+    <ul>
+      <li><a href="#dashboard">Dashboard</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </aside>
 
-    <!-- LEFT SIDE -->
-    <div class="hero-text">
-      <h1>Hello, I'm</h1>
-      <h1 class="name">Phindile Blessed Ndlovu</h1>
+  <!-- MAIN CONTENT -->
+  <main class="content">
 
-      <h3 class="title">Full Stack Developer</h3>
+    <!-- DASHBOARD -->
+    <section id="dashboard">
+      <h1>Hello, I'm Phindile Blessed Ndlovu</h1>
+      <p class="subtitle">Full Stack Developer</p>
 
-      <p>
-        I build modern, scalable, and user-focused web applications using
-        JavaScript and full-stack technologies.
-      </p>
+      <div class="cards">
 
-      <div class="buttons">
-        <a href="#projects"><button>View Projects</button></a>
-        <a href="cv.pdf" download><button>Download CV</button></a>
+        <div class="card" onclick="scrollToSection('projects')">
+          <h2>2+</h2>
+          <p>Projects</p>
+          <span>View my featured projects</span>
+        </div>
+
+        <div class="card" onclick="scrollToSection('experience')">
+          <h2>1+</h2>
+          <p>Experience</p>
+          <span>View my experience</span>
+        </div>
+
+        <div class="card" onclick="scrollToSection('skills')">
+          <h2>10+</h2>
+          <p>Skills</p>
+          <span>Explore my tech skills</span>
+        </div>
+
+        <div class="card" onclick="scrollToSection('certifications')">
+          <h2>2+</h2>
+          <p>Certifications</p>
+          <span>View my certifications</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2>My Skills</h2>
+      <div class="info-box">
+        <p>HTML</p>
+        <p>CSS</p>
+        <p>JavaScript</p>
+        <p>React.js</p>
+        <p>Node.js</p>
+        <p>MongoDB</p>
+        <p>Git</p>
+        <p>GitHub</p>
+        <p>Vercel</p>
+        <p>Responsive Design</p>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <h2>My Experience</h2>
+
+      <div class="exp-card">
+        <img src="ivatha.jpg" alt="Ivatha">
+        <div>
+          <h3>Ivatha Aftercare</h3>
+          <p>Mathematics Tutor (2025 - Present)</p>
+        </div>
       </div>
 
-    </div>
+      <div class="exp-card">
+        <img src="mwr-image.jpg" alt="MWR">
+        <div>
+          <h3>MWR CyberSec</h3>
+          <p>Cybersecurity Internship</p>
+        </div>
+      </div>
 
-    <!-- RIGHT SIDE (IMAGE) -->
-    <div class="hero-image">
-      <img src="Profile.jpg" alt="Phindile">
-    </div>
+      <div class="exp-card">
+        <img src="future-interns.jpg" alt="Future Interns">
+        <div>
+          <h3>Future Interns</h3>
+          <p>Full Stack Developer Intern</p>
+        </div>
+      </div>
 
-  </div>
+    </section>
 
-</section>
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2>My Projects</h2>
 
-  <!-- ===== ABOUT SECTION ===== -->
-  <section id="about">
-  <h2>About Me</h2>
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>Modern responsive developer portfolio.</p>
+      </div>
 
-  <div class="about-container">
+      <div class="project-card">
+        <h3>AI Student App</h3>
+        <p>Educational AI platform for students.</p>
+      </div>
 
-    <p>
-      I am a dedicated Full Stack Developer with a strong interest in building scalable and user-friendly web applications.
-      I enjoy solving real-world problems through code and continuously improving my skills.
-    </p>
+    </section>
 
-    <div class="skills-box">
-      <h3>Technical Skills</h3>
-      <ul>
-        <li><strong>Frontend:</strong> HTML, CSS, JavaScript, React</li>
-        <li><strong>Backend:</strong> Node.js, Express</li>
-        <li><strong>Database:</strong> MongoDB</li>
-        <li><strong>Tools:</strong> Git, GitHub, Vercel</li>
-      </ul>
-    </div>
+    <!-- CERTIFICATIONS -->
+    <section id="certifications">
+      <h2>My Certifications</h2>
 
-    <div class="social-buttons">
-      <a href="https://github.com/P-Ndile" target="_blank">
-        <button>GitHub</button>
-      </a>
+      <div class="cert-card">
+        <img src="SOS.jpg" alt="SOS">
+        <div>
+          <h3>AI Bootcamp</h3>
+          <button>View Certificate</button>
+        </div>
+      </div>
 
-      <a href="https://linkedin.com/in/phindile-ndlovu-471066270" target="_blank">
-        <button>LinkedIn</button>
-      </a>
-    </div>
+    </section>
 
-  </div>
-</section>
-    
-  </section>
+    <!-- EDUCATION -->
+    <section id="education">
+      <h2>My Education</h2>
 
-  <!-- ===== PROJECTS SECTION ===== -->
-  <section id="projects">
-    <h2>My Projects</h2>
+      <div class="edu-card">
+        <img src="UP.jpg" alt="UP">
+        <div>
+          <h3>University of Pretoria</h3>
+          <p>Bachelor of Political Science</p>
+        </div>
+      </div>
 
-    <!-- Project Card -->
-    <div class="project">
-  <h3>AI Student App</h3>
-  <p>
-    An AI-powered learning assistant designed to help students understand concepts, generate quizzes, and improve study efficiency.
-  </p>
-  <p><strong>Tech:</strong> JavaScript, React, Node.js</p>
+    </section>
 
-  <div class="project-links">
-    <a href="#">Live Demo</a>
-    <a href="https://github.com/P-Ndile">GitHub</a>
-  </div>
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+  </main>
 </div>
 
-<div class="project">
-  <h3>Personal Portfolio Website</h3>
-  <p>
-    A responsive portfolio website showcasing my skills, projects, and professional profile. Built to present my work to recruiters and clients.
-  </p>
-  <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
-
-  <div class="project-links">
-    <a href="https://future-fs-01-nine-delta.vercel.app/">Live Demo</a>
-    <a href="https://github.com/P-Ndile/FUTURE_FS_01">GitHub</a>
-  </div>
-</div>
-  </section>
-
-  <section id="experience">
-  <h2>My Experience</h2>
-
-  <div class="exp-card">
-    <img src="ivatha.jpg" alt="Ivatha">
-
-    <div>
-      <h3>Ivatha Aftercare and Homework Service</h3>
-      <h4>Mathematics Tutor | 2025 - Present</h4>
-      <p>
-        Delivered academic support through online platforms, managing lesson planning and reporting.
-        Prepared learner progress reports, demonstrating strong documentation and organizational skills.
-        Strengthened project coordination, communication, and problem-solving abilities.
-      </p>
-      <a href="Ivatha AfterCare.pdf"><button>View Certificate</button></a>
-    </div>
-  </div>
-
-  <div class="exp-card">
-    <img src="mwr-image.jpg" alt="MWR CyberSec">
-
-    <div>
-      <h3>MWR CyberSec Virtual Internship</h3>
-      <h4>Cybersecurity Intern | Current</h4>
-      <p>
-        Completed a 16-week cybersecurity program including workshops, assignments, and a capstone
-        project focused on web application hacking and reporting.
-      </p>
-    </div>
-  </div>
-
-  <div class="exp-card">
-    <img src="future-interns.jpg" alt="Future Interns">
-
-    <div>
-      <h3>Future Interns</h3>
-      <h4>Full Stack Developer Intern | Current</h4>
-      <p>
-        Building real-world web applications while gaining hands-on experience in full stack
-        development using modern technologies.
-      </p>
-    </div>
-  </div>
-
-</section>
-
-<section id="education">
-  <h2>My Education</h2>
-
-  <div class="edu-card">
-    <img src="UP.jpg" alt="University of Pretoria">
-
-    <div>
-      <h3>University of Pretoria</h3>
-      <h4>Bachelor of Political Science | 2024 - Present</h4>
-
-      <p>
-        Participated in the Ready for Work program, gaining practical insights into workplace expectations,
-        professional skills, and real-world readiness.
-      </p>
-<div class="buttons">
-       <a href="Readyforwork (2).pdf"></a><button>View Certificates</button></a>
-    </div>
-    </div>
-  </div>
-
-  <div class="edu-card">
-    <img src="Rand girls'.jpg" alt="Rand Girls School">
-
-    <div>
-      <h3>Rand Girls' School</h3>
-      <h4>Matric | 2018 - 2022</h4>
-    </div>
-  </div>
-
-</section>
-
-<section id="certifications">
-  <h2>My Certifications</h2>
-
-  <div class="cert-card">
-    <img src="SOS.jpg" alt="School Outside School">
-
-    <div>
-      <h3>School Outside School</h3>
-      <h4>AI Bootcamp | Jul 2025</h4>
-
-      <p>
-        Intensive program covering AI fundamentals, ethical use, and real-world applications.
-        Included hands-on projects integrating AI into coding and problem-solving.
-      </p>
-
-      <a href="School Outside School.pdf"><button>View Certificate</button></a>
-    </div>
-  </div>
-
-  <div class="cert-card">
-    <img src="Teacher r.jpg" alt="Teacher Record">
-
-    <div>
-      <h3>Teacher Record</h3>
-      <h4>TEFL Certification | Jul 2025</h4>
-
-      <p>
-        Covered lesson planning, classroom management, grammar, and communication techniques.
-        Focused on delivering engaging lessons and adapting to diverse learners.
-      </p>
-
-      <a href="Teacher record.pdf"><button>View Certificate</button></a>
-    </div>
-  </div>
-
-</section>
-  <!-- ===== CONTACT SECTION ===== -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-
-    <!-- Contact Form -->
-     <p>
-  I'm currently open to internship opportunities, freelance work, and collaborations. 
-  Feel free to reach out — I’d love to connect.
-</p>
-    <form id="contactForm">
-      <input type="text" id="name" placeholder="Your Name" required />
-      <input type="email" id="email" placeholder="Your Email" required />
-      <textarea id="message" placeholder="Your Message"></textarea>
-
-      <button type="submit">Send Message</button>
-    </form>
-    <div class="socials">
-  <a href="https://github.com/P-Ndile" target="_blank">GitHub</a>
-  <a href="https://linkedin.com/in/phindile-ndlovu-471066270" target="_blank">LinkedIn</a>
-</div>
-  </section>
-
-  <!-- Link JavaScript -->
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

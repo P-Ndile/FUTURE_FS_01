@@ -10,294 +10,107 @@
 
 /* Body */
 body {
-  font-family: 'Poppins', sans-serif;
-  background: #0f172a; /* dark navy */
-  color: #e2e8f0;
+  margin: 0;
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
 }
 
-/* ===== NAVBAR ===== */
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 60px;
-}
-
-.nav-links {
+/* LAYOUT */
+.container {
   display: flex;
 }
 
-.nav-links li {
-  margin-left: 30px;
-  list-style: none;
-}
-
-
-/* ===== SECTIONS ===== */
-section {
-  padding: 80px 20px;
-  text-align: center;
-}
-
-/* ===== HOME ===== */
-#home h1 {
-  font-size: 3rem;
-}
-
-#home button {
-  margin-top: 20px;
-  padding: 12px 25px;
-  background: #38bdf8;
-  border: none;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-/* ===== PROJECT CARDS ===== */
-.project {
-  background: #1e293b;
-  border-radius: 12px;
-  margin: 20px auto;
-  padding: 20px;
-  width: 300px;
-  transition: transform 0.3s;
-}
-
-.project:hover {
-  transform: translateY(-5px);
-}
-
-/* ===== FORM ===== */
-form {
-  max-width: 400px;
-  margin: auto;
-}
-
-input, textarea {
-  width: 100%;
-  margin: 10px 0;
-  padding: 12px;
-  border-radius: 8px;
-  border: none;
-}
-
-button {
-  background: #38bdf8;
-  border: none;
-  padding: 12px;
-  color: white;
-  border-radius: 8px;
-}
-/* ===== MOBILE RESPONSIVENESS ===== */
-@media (max-width: 768px) {
-
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul {
-    margin-top: 10px;
-  }
-
-  #home h1 {
-    font-size: 2rem;
-  }
-
-  .project {
-    width: 90%;
-  }
-}
-.profile-pic {
-  width: 150px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-}
-.intro {
-  font-size: 1.2rem;
-  margin-top: 10px;
-}
-
-.sub-intro {
-  color: #94a3b8;
-  margin-bottom: 20px;
-}
-
-.buttons button {
-  margin: 10px;
-}
-
-.project-links a {
-  margin-right: 10px;
-  color: #38bdf8;
-}
-
-.skills li {
-  margin: 8px 0;
-}
-
-.socials a {
-  margin: 10px;
-  color: #38bdf8;
-}
-.profile-pic {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-  border: 3px solid #38bdf8;
-}
-
-.title {
-  color: #38bdf8;
-  margin: 10px 0;
-}
-.floating-icons span {
-  position: absolute;
-  font-size: 30px;
-  opacity: 0.1;
-  animation: float 10s infinite linear;
-}
-
-.floating-icons span:nth-child(1) { top: 20%; left: 10%; }
-.floating-icons span:nth-child(2) { top: 50%; left: 80%; }
-.floating-icons span:nth-child(3) { top: 70%; left: 20%; }
-.floating-icons span:nth-child(4) { top: 30%; left: 60%; }
-.floating-icons span:nth-child(5) { top: 80%; left: 50%; }
-
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-30px); }
-  100% { transform: translateY(0); }
-}
-.about-container {
-  max-width: 700px;
-  margin: auto;
-}
-
-.skills-box {
-  margin-top: 20px;
-}
-
-.skills-box li {
-  margin: 8px 0;
-}
-
-.social-buttons button {
-  margin: 10px;
-  padding: 10px 20px;
-  background: #38bdf8;
-  border: none;
-  border-radius: 8px;
-  color: white;
-  cursor: pointer;
-}
-/* HERO LAYOUT */
-.hero {
+/* SIDEBAR */
+.sidebar {
+  width: 220px;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: #020617;
+  position: fixed;
+  padding: 20px;
 }
 
-/* Container splits left + right */
-.hero-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 80%;
-}
-
-/* LEFT TEXT */
-.hero-text {
-  max-width: 500px;
-}
-
-.name {
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-
-.title {
+.logo {
   color: #38bdf8;
-  margin: 10px 0;
 }
 
-/* RIGHT IMAGE */
-.hero-image img {
-  width: 300px;
-  border-radius: 20px;
+.sidebar ul {
+  list-style: none;
+  padding: 0;
 }
 
-/* BUTTONS */
-.buttons button {
-  margin: 10px;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 8px;
-  background: #38bdf8;
-  color: white;
-  cursor: pointer;
-}
-/* SECTION HEADINGS */
-section h2 {
-  margin-bottom: 30px;
+.sidebar li {
+  margin: 20px 0;
 }
 
-/* TIMELINE */
-.timeline {
-  max-width: 800px;
-  margin: auto;
+.sidebar a {
+  color: #94a3b8;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  color: #38bdf8;
+}
+
+/* CONTENT */
+.content {
+  margin-left: 240px;
+  padding: 40px;
+}
+
+/* DASHBOARD CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
 .card {
   background: #1e293b;
-  padding: 20px;
-  margin: 20px 0;
-  border-radius: 10px;
-}
-
-/* EDUCATION + CERTIFICATIONS */
-.edu-card, .cert-card {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  background: #1e293b;
-  padding: 20px;
-  margin: 20px auto;
-  border-radius: 10px;
-  width: 80%;
-}
-
-.edu-card img, .cert-card img {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-}
-
-/* BUTTONS */
-button {
-  margin-top: 10px;
-  padding: 10px 15px;
-  background: #38bdf8;
-  border: none;
-  border-radius: 6px;
-  color: white;
+  padding: 30px;
+  border-radius: 15px;
   cursor: pointer;
 }
-.exp-card {
+
+.card:hover {
+  border: 1px solid #38bdf8;
+}
+
+.card h2 {
+  font-size: 40px;
+}
+
+.card span {
+  color: #94a3b8;
+}
+
+/* SECTIONS */
+section {
+  margin-bottom: 100px;
+}
+
+/* CARDS (Experience, Education, Certs) */
+.exp-card, .edu-card, .cert-card {
   display: flex;
-  align-items: center;
   gap: 20px;
   background: #1e293b;
   padding: 20px;
-  margin: 20px auto;
+  margin-top: 20px;
   border-radius: 10px;
-  width: 80%;
 }
 
-.exp-card img {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
+.exp-card img, .edu-card img, .cert-card img {
+  width: 60px;
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+input, textarea {
+  margin: 10px 0;
+  padding: 10px;
 }
